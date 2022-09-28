@@ -300,11 +300,12 @@ public class UIManager : MonoBehaviour
                 }
                 else if(image_Seq[0].width > 1920 && image_Seq[0].height <= 1080)
                 {
-                    GetComponent<RectTransform>().sizeDelta = new Vector2(1920, image_Seq[0].height - (image_Seq[0].height * (1920f / image_Seq[0].width)));
+                    GetComponent<RectTransform>().sizeDelta = new Vector2(1920, image_Seq[0].height - (image_Seq[0].height * (1 - 1920f / image_Seq[0].width)));
                 }
                 else if (image_Seq[0].width <= 1920 && image_Seq[0].height > 1080)
                 {
-                    GetComponent<RectTransform>().sizeDelta = new Vector2(image_Seq[0].width - (image_Seq[0].width * (1080f / image_Seq[0].height)), 1080);
+                    Debug.Log("test");
+                    GetComponent<RectTransform>().sizeDelta = new Vector2(image_Seq[0].width - (image_Seq[0].width * ( 1 - 1080f / image_Seq[0].height)), 1080);
                 }
                 else if (image_Seq[0].width > 1920 && image_Seq[0].height > 1080)
                 {
