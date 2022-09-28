@@ -1491,8 +1491,8 @@ MonoBehaviour:
   flip_Toggle: {fileID: 91528662}
   offset_Slider: {fileID: 1763618757}
   FileBrowserSkin: {fileID: 11400000, guid: 07c1616acb3e05d4789781b38d6ab800, type: 2}
-  rowSize: 4
-  seamMaxSize: 0.3
+  rowSize: 2
+  seamMaxSize: 0.2
 --- !u!114 &899746755
 MonoBehaviour:
   m_ObjectHideFlags: 0

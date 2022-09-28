@@ -300,22 +300,30 @@ public class UIManager : MonoBehaviour
                 }
                 else if(image_Seq[0].width > 1920 && image_Seq[0].height <= 1080)
                 {
-
+                    GetComponent<RectTransform>().sizeDelta = new Vector2(1920, image_Seq[0].height - (image_Seq[0].height * (1920f / image_Seq[0].width)));
                 }
                 else if (image_Seq[0].width <= 1920 && image_Seq[0].height > 1080)
                 {
-
+                    GetComponent<RectTransform>().sizeDelta = new Vector2(image_Seq[0].width - (image_Seq[0].width * (1080f / image_Seq[0].height)), 1080);
                 }
-                else if (image_Seq[0].width <= 1920 && image_Seq[0].height > 1080)
+                else if (image_Seq[0].width > 1920 && image_Seq[0].height > 1080)
                 {
-
+                    float widthDelta = 1920f / image_Seq[0].width;
+                    float heightDelta = 1080f / image_Seq[0].height;
+                    if (widthDelta < heightDelta) 
+                    {
+                        GetComponent<RectTransform>().sizeDelta = new Vector2(1920, image_Seq[0].height * (1920f / image_Seq[0].width));
+                    }
+                    else
+                    {
+                        GetComponent<RectTransform>().sizeDelta = new Vector2(image_Seq[0].width * (1080f / image_Seq[0].height), 1080);
+                    }
                 }
             }
             catch (Exception e)
             {
                 importMessage = "Invalid Image Sequence - Images have to be of same size and name ending with increasing \"_number\"";
                 ImportImageSequence();
-                Debug.Log("Invalid Images");
             }
         }
         else
