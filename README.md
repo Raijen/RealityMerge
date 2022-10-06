@@ -22,13 +22,13 @@ First, the images to be used must be imported - by clicking on the "Import Image
 
 | **Function name** | **Effect** |
 | ------ | ------ |
-| Warp Image  |  |
-| Row Size |  |
-| Seam Size |  | 
-| Horizontal  |  |
-| Flip |  |
-| Offset |  |
-| Save Image |  |
+| Warp Image  | Recalculate the randomly generated seam |
+| Row Size | Number of pixels that a row has in height |
+| Seam Size | Maximum width of the seam relative to the image size, value range from 0.01 - 1.0 | 
+| Horizontal  | Checkbox with which it is possible to switch between a horizontal or a vertical seam |
+| Flip | Checkbox with which the order of the used images can be reversed |
+| Offset | Slider with which the position of the seam can be moved |
+| Save Image | Saves the current image in the same directory where the original images were located |
 
 Contributors: [Lukas Scheurer](lukas.scheurer@study.hs-duesseldorf.de)
 
